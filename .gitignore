@@ -1,0 +1,14 @@
+/**/node_modules/
+/**/.DS_Store
+/**/*.log
+/**/lib/
+/**/.env
+/**/.env.local
+/**/.next/
+/**/.parcel-cache
+.vercel
+
+/**/cache
+/**/artifacts
+/**/out
+/**/dist

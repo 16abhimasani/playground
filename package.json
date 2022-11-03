@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "main": "",
+  "repository": "",
+  "author": "<ash@bhimasani.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
+    "prettier": "prettier --write \"**/*.{ts,tsx,js,json,css,yml,md,sol,rs,glsl,frag,toml}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-glsl": "^0.0.6",
+    "prettier-plugin-organize-imports": "^3.1.1",
+    "prettier-plugin-rust": "^0.1.8",
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
+    "prettier-plugin-toml": "^0.3.1",
+    "typescript": "^4.8.4"
+  }
+}
