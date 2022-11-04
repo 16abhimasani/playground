@@ -12,4 +12,4 @@ Environment for me to play with frameworks, stacks, languages, and try new thing
 | [`hardhat`](https://hardhat.org/hardhat-runner/docs/guides/deploying)        | Standard Hardhat env used at POB                                                             |
 | [`solana`](https://docs.solana.com/getstarted/rust)                          | Solana / Rust contract env                                                                   |
 | [`rust`](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html) | Rust env                                                                                     |
-| [`sketch`](https://p5js.org/get-started/#settingUp)                          | p5 gen-art env env                                                                           |
+| [`sketch`](https://p5js.org/get-started/#settingUp)                          | p5 gen-art env                                                                               |
