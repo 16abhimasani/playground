@@ -2,11 +2,15 @@ import create from 'zustand';
 import { redux } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
 
+interface EnsStoreState {
+  addressToEnsMap: { [x: string]: string };
+  setEns: (address: string, ens: string) => void;
+}
 export const useEnsStore = create(
-  immer((set) => ({
+  immer<EnsStoreState>((set) => ({
     addressToEnsMap: {},
     setEns: (address: string, name: string) => {
-      set((update: { addressToEnsMap: { [x: string]: string } }) => {
+      set((update) => {
         update.addressToEnsMap[address] = name;
       });
     },
