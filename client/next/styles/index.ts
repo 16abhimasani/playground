@@ -1,4 +1,17 @@
-html,
+import { createGlobalStyle } from 'styled-components';
+
+export const BREAKPTS = {
+  XS: 360,
+  SM: 480,
+  MD: 768,
+  LG: 992,
+  XL: 1200,
+};
+
+export type BreakPts = keyof typeof BREAKPTS;
+
+export const ThemedGlobalStyle = createGlobalStyle`
+    html,
 body {
   padding: 0;
   margin: 0;
@@ -24,3 +37,4 @@ a {
     background: black;
   }
 }
+`;
