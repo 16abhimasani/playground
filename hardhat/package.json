@@ -1,5 +1,5 @@
 {
-  "name": "@pob/protocol",
+  "name": "hardhat",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",

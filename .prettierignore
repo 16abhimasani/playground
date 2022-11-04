@@ -12,5 +12,7 @@ yarn-error.log*
 **/out
 .vercel
 **/artifacts
+**/dist
+*.min.js
 /rust/target
 /solana/target
