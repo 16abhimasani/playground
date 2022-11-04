@@ -1,14 +1,13 @@
-import { ethers } from 'hardhat';
 import { Signer } from 'ethers';
+import { ethers } from 'hardhat';
 
-import { ERC20Mintable } from '../typechain/ERC20Mintable';
-import { PrintServiceV2 } from '../typechain/PrintServiceV2';
 import { expect } from 'chai';
 import {
-  PrintServiceProductContractType,
-  PRINT_SERVICE_CURRENCY_CONFIG,
   PRINT_SERVICE_CONFIG,
+  PRINT_SERVICE_CURRENCY_CONFIG,
 } from '../contracts/print-service/constants';
+import { ERC20Mintable } from '../typechain/ERC20Mintable';
+import { PrintServiceV2 } from '../typechain/PrintServiceV2';
 
 const LONDON_GIFT_CONTRACT = '0x7645eec8bb51862a5aa855c40971b2877dae81af';
 

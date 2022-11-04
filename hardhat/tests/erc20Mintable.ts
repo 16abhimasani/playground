@@ -1,8 +1,8 @@
-import { ethers } from 'hardhat';
 import { BigNumber, Signer } from 'ethers';
+import { ethers } from 'hardhat';
 
-import { ERC20Mintable } from '../typechain/ERC20Mintable';
 import { expect } from 'chai';
+import { ERC20Mintable } from '../typechain/ERC20Mintable';
 
 const TOKEN_SYMBOL = '$WIGGLE';
 const TOKEN_NAME = '$WIGGLE';

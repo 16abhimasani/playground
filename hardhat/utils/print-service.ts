@@ -1,6 +1,6 @@
 import { BigNumber, utils } from 'ethers';
-import { ONE_TOKEN_IN_BASE_UNITS } from './';
 import { deployments } from '../deployments';
+import { ONE_TOKEN_IN_BASE_UNITS } from './';
 
 type paymentCurrencyType = 'eth' | 'london' | 'poster';
 type PrintServiceProductType = 'print0' | 'print1';

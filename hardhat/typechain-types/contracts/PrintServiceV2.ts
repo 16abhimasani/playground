@@ -2,6 +2,12 @@
 /* tslint:disable */
 /* eslint-disable */
 import type {
+  EventFragment,
+  FunctionFragment,
+  Result,
+} from '@ethersproject/abi';
+import type { Listener, Provider } from '@ethersproject/providers';
+import type {
   BaseContract,
   BigNumber,
   BigNumberish,
@@ -13,20 +19,14 @@ import type {
   PopulatedTransaction,
   Signer,
   utils,
-} from "ethers";
+} from 'ethers';
 import type {
-  FunctionFragment,
-  Result,
-  EventFragment,
-} from "@ethersproject/abi";
-import type { Listener, Provider } from "@ethersproject/providers";
-import type {
-  TypedEventFilter,
-  TypedEvent,
-  TypedListener,
   OnEvent,
   PromiseOrValue,
-} from "../common";
+  TypedEvent,
+  TypedEventFilter,
+  TypedListener,
+} from '../common';
 
 export declare namespace PrintServiceV2 {
   export type ProductStruct = {
@@ -44,115 +44,115 @@ export declare namespace PrintServiceV2 {
 
 export interface PrintServiceV2Interface extends utils.Interface {
   functions: {
-    "buy(address,uint256,address,uint256,bytes32)": FunctionFragment;
-    "config(address,uint256)": FunctionFragment;
-    "orderId()": FunctionFragment;
-    "owner()": FunctionFragment;
-    "renounceOwnership()": FunctionFragment;
-    "setInStock(address,uint256,bool)": FunctionFragment;
-    "setPrice(address,uint256,uint256)": FunctionFragment;
-    "setProducts(address,(string,uint256,bool)[])": FunctionFragment;
-    "setTreasury(address)": FunctionFragment;
-    "transferOwnership(address)": FunctionFragment;
-    "treasury()": FunctionFragment;
+    'buy(address,uint256,address,uint256,bytes32)': FunctionFragment;
+    'config(address,uint256)': FunctionFragment;
+    'orderId()': FunctionFragment;
+    'owner()': FunctionFragment;
+    'renounceOwnership()': FunctionFragment;
+    'setInStock(address,uint256,bool)': FunctionFragment;
+    'setPrice(address,uint256,uint256)': FunctionFragment;
+    'setProducts(address,(string,uint256,bool)[])': FunctionFragment;
+    'setTreasury(address)': FunctionFragment;
+    'transferOwnership(address)': FunctionFragment;
+    'treasury()': FunctionFragment;
   };
 
   getFunction(
     nameOrSignatureOrTopic:
-      | "buy"
-      | "config"
-      | "orderId"
-      | "owner"
-      | "renounceOwnership"
-      | "setInStock"
-      | "setPrice"
-      | "setProducts"
-      | "setTreasury"
-      | "transferOwnership"
-      | "treasury"
+      | 'buy'
+      | 'config'
+      | 'orderId'
+      | 'owner'
+      | 'renounceOwnership'
+      | 'setInStock'
+      | 'setPrice'
+      | 'setProducts'
+      | 'setTreasury'
+      | 'transferOwnership'
+      | 'treasury',
   ): FunctionFragment;
 
   encodeFunctionData(
-    functionFragment: "buy",
+    functionFragment: 'buy',
     values: [
       PromiseOrValue<string>,
       PromiseOrValue<BigNumberish>,
       PromiseOrValue<string>,
       PromiseOrValue<BigNumberish>,
-      PromiseOrValue<BytesLike>
-    ]
+      PromiseOrValue<BytesLike>,
+    ],
   ): string;
   encodeFunctionData(
-    functionFragment: "config",
-    values: [PromiseOrValue<string>, PromiseOrValue<BigNumberish>]
+    functionFragment: 'config',
+    values: [PromiseOrValue<string>, PromiseOrValue<BigNumberish>],
   ): string;
-  encodeFunctionData(functionFragment: "orderId", values?: undefined): string;
-  encodeFunctionData(functionFragment: "owner", values?: undefined): string;
+  encodeFunctionData(functionFragment: 'orderId', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
   encodeFunctionData(
-    functionFragment: "renounceOwnership",
-    values?: undefined
+    functionFragment: 'renounceOwnership',
+    values?: undefined,
   ): string;
   encodeFunctionData(
-    functionFragment: "setInStock",
+    functionFragment: 'setInStock',
     values: [
       PromiseOrValue<string>,
       PromiseOrValue<BigNumberish>,
-      PromiseOrValue<boolean>
-    ]
+      PromiseOrValue<boolean>,
+    ],
   ): string;
   encodeFunctionData(
-    functionFragment: "setPrice",
+    functionFragment: 'setPrice',
     values: [
       PromiseOrValue<string>,
       PromiseOrValue<BigNumberish>,
-      PromiseOrValue<BigNumberish>
-    ]
+      PromiseOrValue<BigNumberish>,
+    ],
   ): string;
   encodeFunctionData(
-    functionFragment: "setProducts",
-    values: [PromiseOrValue<string>, PrintServiceV2.ProductStruct[]]
+    functionFragment: 'setProducts',
+    values: [PromiseOrValue<string>, PrintServiceV2.ProductStruct[]],
   ): string;
   encodeFunctionData(
-    functionFragment: "setTreasury",
-    values: [PromiseOrValue<string>]
+    functionFragment: 'setTreasury',
+    values: [PromiseOrValue<string>],
   ): string;
   encodeFunctionData(
-    functionFragment: "transferOwnership",
-    values: [PromiseOrValue<string>]
+    functionFragment: 'transferOwnership',
+    values: [PromiseOrValue<string>],
   ): string;
-  encodeFunctionData(functionFragment: "treasury", values?: undefined): string;
+  encodeFunctionData(functionFragment: 'treasury', values?: undefined): string;
 
-  decodeFunctionResult(functionFragment: "buy", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "config", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "orderId", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'buy', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'config', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'orderId', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'owner', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "renounceOwnership",
-    data: BytesLike
+    functionFragment: 'renounceOwnership',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "setInStock", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "setPrice", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setInStock', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setPrice', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "setProducts",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: "setTreasury",
-    data: BytesLike
+    functionFragment: 'setProducts',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "transferOwnership",
-    data: BytesLike
+    functionFragment: 'setTreasury',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "treasury", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'transferOwnership',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'treasury', data: BytesLike): Result;
 
   events: {
-    "OwnershipTransferred(address,address)": EventFragment;
-    "PrintOrderReceived(uint256,bytes32,uint256,address,uint256)": EventFragment;
+    'OwnershipTransferred(address,address)': EventFragment;
+    'PrintOrderReceived(uint256,bytes32,uint256,address,uint256)': EventFragment;
   };
 
-  getEvent(nameOrSignatureOrTopic: "OwnershipTransferred"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "PrintOrderReceived"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'OwnershipTransferred'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'PrintOrderReceived'): EventFragment;
 }
 
 export interface OwnershipTransferredEventObject {
@@ -192,15 +192,15 @@ export interface PrintServiceV2 extends BaseContract {
   queryFilter<TEvent extends TypedEvent>(
     event: TypedEventFilter<TEvent>,
     fromBlockOrBlockhash?: string | number | undefined,
-    toBlock?: string | number | undefined
+    toBlock?: string | number | undefined,
   ): Promise<Array<TEvent>>;
 
   listeners<TEvent extends TypedEvent>(
-    eventFilter?: TypedEventFilter<TEvent>
+    eventFilter?: TypedEventFilter<TEvent>,
   ): Array<TypedListener<TEvent>>;
   listeners(eventName?: string): Array<Listener>;
   removeAllListeners<TEvent extends TypedEvent>(
-    eventFilter: TypedEventFilter<TEvent>
+    eventFilter: TypedEventFilter<TEvent>,
   ): this;
   removeAllListeners(eventName?: string): this;
   off: OnEvent<this>;
@@ -215,13 +215,13 @@ export interface PrintServiceV2 extends BaseContract {
       _collection: PromiseOrValue<string>,
       _tokenId: PromiseOrValue<BigNumberish>,
       _orderHash: PromiseOrValue<BytesLike>,
-      overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
+      overrides?: PayableOverrides & { from?: PromiseOrValue<string> },
     ): Promise<ContractTransaction>;
 
     config(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<BigNumberish>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<
       [string, BigNumber, boolean] & {
         id: string;
@@ -235,37 +235,37 @@ export interface PrintServiceV2 extends BaseContract {
     owner(overrides?: CallOverrides): Promise<[string]>;
 
     renounceOwnership(
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<ContractTransaction>;
 
     setInStock(
       _currency: PromiseOrValue<string>,
       _productIndex: PromiseOrValue<BigNumberish>,
       _inStock: PromiseOrValue<boolean>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<ContractTransaction>;
 
     setPrice(
       _currency: PromiseOrValue<string>,
       _productIndex: PromiseOrValue<BigNumberish>,
       _price: PromiseOrValue<BigNumberish>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<ContractTransaction>;
 
     setProducts(
       _currency: PromiseOrValue<string>,
       _products: PrintServiceV2.ProductStruct[],
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<ContractTransaction>;
 
     setTreasury(
       _treasury: PromiseOrValue<string>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<ContractTransaction>;
 
     transferOwnership(
       newOwner: PromiseOrValue<string>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<ContractTransaction>;
 
     treasury(overrides?: CallOverrides): Promise<[string]>;
@@ -277,13 +277,13 @@ export interface PrintServiceV2 extends BaseContract {
     _collection: PromiseOrValue<string>,
     _tokenId: PromiseOrValue<BigNumberish>,
     _orderHash: PromiseOrValue<BytesLike>,
-    overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
+    overrides?: PayableOverrides & { from?: PromiseOrValue<string> },
   ): Promise<ContractTransaction>;
 
   config(
     arg0: PromiseOrValue<string>,
     arg1: PromiseOrValue<BigNumberish>,
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<
     [string, BigNumber, boolean] & {
       id: string;
@@ -297,37 +297,37 @@ export interface PrintServiceV2 extends BaseContract {
   owner(overrides?: CallOverrides): Promise<string>;
 
   renounceOwnership(
-    overrides?: Overrides & { from?: PromiseOrValue<string> }
+    overrides?: Overrides & { from?: PromiseOrValue<string> },
   ): Promise<ContractTransaction>;
 
   setInStock(
     _currency: PromiseOrValue<string>,
     _productIndex: PromiseOrValue<BigNumberish>,
     _inStock: PromiseOrValue<boolean>,
-    overrides?: Overrides & { from?: PromiseOrValue<string> }
+    overrides?: Overrides & { from?: PromiseOrValue<string> },
   ): Promise<ContractTransaction>;
 
   setPrice(
     _currency: PromiseOrValue<string>,
     _productIndex: PromiseOrValue<BigNumberish>,
     _price: PromiseOrValue<BigNumberish>,
-    overrides?: Overrides & { from?: PromiseOrValue<string> }
+    overrides?: Overrides & { from?: PromiseOrValue<string> },
   ): Promise<ContractTransaction>;
 
   setProducts(
     _currency: PromiseOrValue<string>,
     _products: PrintServiceV2.ProductStruct[],
-    overrides?: Overrides & { from?: PromiseOrValue<string> }
+    overrides?: Overrides & { from?: PromiseOrValue<string> },
   ): Promise<ContractTransaction>;
 
   setTreasury(
     _treasury: PromiseOrValue<string>,
-    overrides?: Overrides & { from?: PromiseOrValue<string> }
+    overrides?: Overrides & { from?: PromiseOrValue<string> },
   ): Promise<ContractTransaction>;
 
   transferOwnership(
     newOwner: PromiseOrValue<string>,
-    overrides?: Overrides & { from?: PromiseOrValue<string> }
+    overrides?: Overrides & { from?: PromiseOrValue<string> },
   ): Promise<ContractTransaction>;
 
   treasury(overrides?: CallOverrides): Promise<string>;
@@ -339,13 +339,13 @@ export interface PrintServiceV2 extends BaseContract {
       _collection: PromiseOrValue<string>,
       _tokenId: PromiseOrValue<BigNumberish>,
       _orderHash: PromiseOrValue<BytesLike>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     config(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<BigNumberish>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<
       [string, BigNumber, boolean] & {
         id: string;
@@ -364,58 +364,58 @@ export interface PrintServiceV2 extends BaseContract {
       _currency: PromiseOrValue<string>,
       _productIndex: PromiseOrValue<BigNumberish>,
       _inStock: PromiseOrValue<boolean>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     setPrice(
       _currency: PromiseOrValue<string>,
       _productIndex: PromiseOrValue<BigNumberish>,
       _price: PromiseOrValue<BigNumberish>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     setProducts(
       _currency: PromiseOrValue<string>,
       _products: PrintServiceV2.ProductStruct[],
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     setTreasury(
       _treasury: PromiseOrValue<string>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     transferOwnership(
       newOwner: PromiseOrValue<string>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     treasury(overrides?: CallOverrides): Promise<string>;
   };
 
   filters: {
-    "OwnershipTransferred(address,address)"(
+    'OwnershipTransferred(address,address)'(
       previousOwner?: PromiseOrValue<string> | null,
-      newOwner?: PromiseOrValue<string> | null
+      newOwner?: PromiseOrValue<string> | null,
     ): OwnershipTransferredEventFilter;
     OwnershipTransferred(
       previousOwner?: PromiseOrValue<string> | null,
-      newOwner?: PromiseOrValue<string> | null
+      newOwner?: PromiseOrValue<string> | null,
     ): OwnershipTransferredEventFilter;
 
-    "PrintOrderReceived(uint256,bytes32,uint256,address,uint256)"(
+    'PrintOrderReceived(uint256,bytes32,uint256,address,uint256)'(
       _orderId?: PromiseOrValue<BigNumberish> | null,
       _orderHash?: PromiseOrValue<BytesLike> | null,
       _productId?: null,
       _collection?: null,
-      _tokenId?: null
+      _tokenId?: null,
     ): PrintOrderReceivedEventFilter;
     PrintOrderReceived(
       _orderId?: PromiseOrValue<BigNumberish> | null,
       _orderHash?: PromiseOrValue<BytesLike> | null,
       _productId?: null,
       _collection?: null,
-      _tokenId?: null
+      _tokenId?: null,
     ): PrintOrderReceivedEventFilter;
   };
 
@@ -426,13 +426,13 @@ export interface PrintServiceV2 extends BaseContract {
       _collection: PromiseOrValue<string>,
       _tokenId: PromiseOrValue<BigNumberish>,
       _orderHash: PromiseOrValue<BytesLike>,
-      overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
+      overrides?: PayableOverrides & { from?: PromiseOrValue<string> },
     ): Promise<BigNumber>;
 
     config(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<BigNumberish>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     orderId(overrides?: CallOverrides): Promise<BigNumber>;
@@ -440,37 +440,37 @@ export interface PrintServiceV2 extends BaseContract {
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
     renounceOwnership(
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<BigNumber>;
 
     setInStock(
       _currency: PromiseOrValue<string>,
       _productIndex: PromiseOrValue<BigNumberish>,
       _inStock: PromiseOrValue<boolean>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<BigNumber>;
 
     setPrice(
       _currency: PromiseOrValue<string>,
       _productIndex: PromiseOrValue<BigNumberish>,
       _price: PromiseOrValue<BigNumberish>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<BigNumber>;
 
     setProducts(
       _currency: PromiseOrValue<string>,
       _products: PrintServiceV2.ProductStruct[],
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<BigNumber>;
 
     setTreasury(
       _treasury: PromiseOrValue<string>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<BigNumber>;
 
     transferOwnership(
       newOwner: PromiseOrValue<string>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<BigNumber>;
 
     treasury(overrides?: CallOverrides): Promise<BigNumber>;
@@ -483,13 +483,13 @@ export interface PrintServiceV2 extends BaseContract {
       _collection: PromiseOrValue<string>,
       _tokenId: PromiseOrValue<BigNumberish>,
       _orderHash: PromiseOrValue<BytesLike>,
-      overrides?: PayableOverrides & { from?: PromiseOrValue<string> }
+      overrides?: PayableOverrides & { from?: PromiseOrValue<string> },
     ): Promise<PopulatedTransaction>;
 
     config(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<BigNumberish>,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     orderId(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -497,37 +497,37 @@ export interface PrintServiceV2 extends BaseContract {
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     renounceOwnership(
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<PopulatedTransaction>;
 
     setInStock(
       _currency: PromiseOrValue<string>,
       _productIndex: PromiseOrValue<BigNumberish>,
       _inStock: PromiseOrValue<boolean>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<PopulatedTransaction>;
 
     setPrice(
       _currency: PromiseOrValue<string>,
       _productIndex: PromiseOrValue<BigNumberish>,
       _price: PromiseOrValue<BigNumberish>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<PopulatedTransaction>;
 
     setProducts(
       _currency: PromiseOrValue<string>,
       _products: PrintServiceV2.ProductStruct[],
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<PopulatedTransaction>;
 
     setTreasury(
       _treasury: PromiseOrValue<string>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<PopulatedTransaction>;
 
     transferOwnership(
       newOwner: PromiseOrValue<string>,
-      overrides?: Overrides & { from?: PromiseOrValue<string> }
+      overrides?: Overrides & { from?: PromiseOrValue<string> },
     ): Promise<PopulatedTransaction>;
 
     treasury(overrides?: CallOverrides): Promise<PopulatedTransaction>;

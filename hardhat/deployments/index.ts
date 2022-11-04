@@ -21,5 +21,5 @@ interface Deployments {
     london: string;
     printServiceV2: string;
     poster: string;
-  }
+  };
 }

@@ -1,2 +1,2 @@
-export * from './printServiceV2';
 export * from './poster';
+export * from './printServiceV2';
