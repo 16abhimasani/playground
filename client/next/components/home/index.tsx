@@ -1,7 +1,9 @@
 import { FC } from 'react';
+import { useEnsStore } from '../../stores';
 import classes from './home.module.scss';
 
 export const Home: FC = () => {
+  const addressToEnsMap = useEnsStore((state) => state.addressToEnsMap);
   return (
     <div className={classes.container}>
       <main className={classes.main}>
