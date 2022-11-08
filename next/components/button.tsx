@@ -1,15 +1,15 @@
-import { FC, useState } from "react";
-import { useDebounceEffect } from "../hooks/useDebounceEffect";
+import { FC, useCallback, useState } from 'react';
+import { useDebounceEffect } from '../hooks/useDebounceEffect';
 
 export const DebounceButtonTest: FC = () => {
   const [count, setCount] = useState(0);
-  const [finalCount, setFinalCount] = useState(0); 
-  useDebounceEffect(() => setFinalCount(count), [count], 1000);
+  const makeFetch = useCallback((args: any) => {
+    console.log('make call to api after debounce'), args;
+  }, []);
+  useDebounceEffect(() => makeFetch(count), [count], 1000);
   return (
     <>
-      <button onClick={() => setCount(count + 1)}>
-        wiggle: {finalCount}
-      </button>
+      <button onClick={() => setCount(count + 1)}>wiggle: {count}</button>
     </>
-  )
-}
+  );
+};

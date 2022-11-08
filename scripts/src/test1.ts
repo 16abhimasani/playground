@@ -19,7 +19,7 @@ const isValid = (s: string): boolean => {
         openStack.push(char);
       }
     }
-    // if closing character => check if it matches last opening character in stack 
+    // if closing character => check if it matches last opening character in stack
     else if (openStack.pop() !== map[char]) {
       // improper closing
       return false;
@@ -33,11 +33,10 @@ const testCases = [
   '()[]{}',
   '([)]',
   '([',
-  '{[( make sure this closes )]}'
+  '{[( make sure this closes )]}',
 ];
 testCases.forEach((testCase) => {
   console.log(isValid(testCase), `isValid | ${testCase}`);
 });
-
 
 export {};
