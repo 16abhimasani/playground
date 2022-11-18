@@ -39,7 +39,7 @@ export const TestComp: FC = () => {
   }, []);
   return (
     <>
-      <div style={{ color: 'white' }}>blockNum: {blockNum}</div>
+      <div>blockNum: {blockNum}</div>
     </>
   );
 };
